@@ -35,6 +35,7 @@ build:
 test:
   stage: test
   script: gradle check
+  coverage: '/    - Instruction Coverage: ([0-9.]+)%/'
   cache:
     key: "$CI_COMMIT_REF_NAME"
     policy: pull
