@@ -42,6 +42,9 @@ test:
     paths:
       - build
       - .gradle
+  artifacts:
+    paths:
+      - build/jacoco/jacocoTestReport.xml
 
 coverage:
   # Must be in a stage later than test-jdk11's stage.
