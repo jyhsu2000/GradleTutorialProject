@@ -1,4 +1,5 @@
 plugins {
+    id "application"
     id 'java'
     id 'jacoco'
     id 'org.barfuin.gradle.jacocolog' version '2.0.0'
@@ -6,6 +7,14 @@ plugins {
 
 group 'org.example'
 version '1.0-SNAPSHOT'
+
+ext {
+    javaMainClass = "org.example.Main"
+}
+
+application {
+    mainClassName = javaMainClass
+}
 
 repositories {
     mavenCentral()
